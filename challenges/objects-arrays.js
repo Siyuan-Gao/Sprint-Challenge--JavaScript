@@ -79,15 +79,14 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
 
-const universities = ["Missouri Southern State College", "The School of the Art Institute of Chicago", "Marian College", "Sultan Salahuddin Abdul Aziz Shah Polytechnic", "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft", "alem University", "Coastal Carolina University","Universidad Católica de Ávila", "Universitat Rovira I Virgili Tarragona" ];
+const universities = [ ];
 
-universities.sort(function(a, b){
-  if(a.university < b.university) { return -1; }
-  if(a.university > b.university) { return 1; }
-  return 0;
-})
+for (let i=0; i < graduates.length; i++) {
+  universities[i] = graduates[i].university
+}
+universities.sort();
+console.log(universities)
 
-console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -96,11 +95,24 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 
-const contactInfo = [{first_name:"Cynde",email:"ctorry0@macromedia.com"}, {first_name:"Saundra",email:"swhal1@state.gov"}, {first_name:"Lambert",email:"lparham2@techcrunch.com"}, {first_name:"Modestine",email:"mdolder3@symantec.com"}, {first_name:"Chick",email:"camorts4@google.com.au"}, {first_name:"Jakob",email:"jharken5@spiegel.de"}, {first_name:"Robbi",email:"rbrister6@redcross.org"}, {first_name:"Colline",email:"cbrosh7@alibaba.com"}, {first_name:"Michail",email:"mrome8@shinystat.com"},{first_name:"Hube",email:"hlethbrig9@foxnews.com"}];
-console.log(contactInfo["first_name"]+ ' ' +["email"];
+const contactInfo = [];
+
+for (let i=0; i < graduates.length; i++) {
+  contactInfo[i] = `${graduates[i].first_name} + ' '+ ${graduates[i].email}`
+}
+console.log(contactInfo);
+
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
+
+
 const unisWithUni = [];
+
+for (let i=0; i < graduates.length; i++) {
+  if (graduates[i].university.includes("Uni")) {
+     unisWithUni.push(graduates[i].university);
+  }
+}
 console.log(unisWithUni);
 
 
@@ -128,6 +140,8 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 console.log(displayNames);
+
+
 
 /* Request 2: .map()
 
