@@ -139,6 +139,11 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach((animal)=>{
+ displayNames.push(`animal_name:${animal.animal_name}`,`scientific_name:${animal.animal_name}`)
+  
+  })
+
 console.log(displayNames);
 
 
@@ -163,7 +168,11 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
+const lowPopulationAnimals = zooAnimals.filter((animal)=>{
+  return animal.population < 5;
+});
 
+console.log(lowPopulationAnimals)
 
 
 
